@@ -1,0 +1,19 @@
+<h1>Personal Information Form</h1>
+<h2>Enter information</h2>
+
+<form [formGroup]="loginform" (ngsubmit)="loginuser()">
+  <input type="text" placeholder="Enter full name" formControlName="fullname">
+  <span *ngIf="fullname?.invalid && fullname?.touched">*name is required!!</span>
+  <br><br>
+  <input type="age" placeholder="Enter age" formControlName="age">
+  <span *ngIf="age?.invalid && age?.touched">*age is required!!</span>
+  <br><br>
+  <input type="email" placeholder="Enter email" formControlName="email">
+  <span *ngIf="email?.invalid && email?.touched">*email is required!!</span>
+  <br><br>
+  <input type="phonenumber" placeholder="Enter phone number" formControlName="phonenumber">
+  <span *ngIf="phonenumber?.invalid && phonenumber?.touched">*phone number is required!!</span>
+  <br><br>
+  <button>Create Account</button>
+</form>
+<body></body>
